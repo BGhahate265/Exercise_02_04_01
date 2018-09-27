@@ -8,7 +8,7 @@ Author: Braddock Ghahate
 
 
 <head>
-<title>Musical Scale</title>
+<title>Process Scholarship</title>
     <meta charset="UTF-50">
     <meta name="viewport" content="initial-scale=1.0">
     <script src="modernizr.custom.65897.js"></script>
