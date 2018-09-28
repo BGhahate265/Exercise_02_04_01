@@ -31,7 +31,7 @@ if (isset($_GET['content'])) {
             break;
         case 'Home':
             //a value of home means to display default page 
-        default:
+        default;
             include("inc_home.html");
             break;
     }
