@@ -14,7 +14,7 @@ Author: Braddock Ghahate
     <script src="modernizr.custom.65897.js"></script>
 </head>
 <body>
-<h2>Superglobals</h2>
+    <h2 style="text-align: center">Scholarship Form 2</h2>
 <?php
 $errorCount = 0;
     
@@ -39,7 +39,6 @@ function displayRequired($fieldName) {
     function redisplayForm($firstName, $lastName) {
         
     ?>
-    <h2 style="text-align: center">Scholarship Form</h2>
 <form name="scholarship" action="ProcessScholarship2.php" method="post">
     <p>First Name: <input type="text" name="fName" value=" <?php echo $firstName; ?>"></p>
     <p>Last Name: <input type="text" name="lName" <?php echo $lastName; ?>></p>

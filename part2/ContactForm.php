@@ -78,7 +78,7 @@ function displayForm($sender, $email, $subject, $message) {
 
 if(isset($_POST['Submit'])) {
     $sender = validateInput($_POST['Sender'], "Your Name");
-    $email = validateInput($_POST['Email'], "Your E-mail");
+    $email = validateEmail($_POST['Email'], "Your E-mail");
     $subject = validateInput($_POST['Subject'], "Subject");
     $message = validateInput($_POST['Message'], "Message");
     if($errorCount === 0) {
@@ -96,10 +96,11 @@ if ($showForm) {
     displayForm($sender, $email, $subject, $message);
 }
     else {
-        $result = true;
-        //debug
+        $senderAddress = "$sender <$email>";
+        $headers = "From: $senderAddress\nCC:$senderAddress";
+        $result = mail("bghahate265@west-mec.org", $subject, $message, $headers);
         if ($result) {
-            echo "<p>Your message has been sent =. Thank you, " . $sender . ". </p>\n";
+            echo "<p>Your message has been sent. Thank you, " . $sender . ". </p>\n";
         }
         else {
             echo "<p>There was an error sending your message, " . $sender . ". </p>\n";
